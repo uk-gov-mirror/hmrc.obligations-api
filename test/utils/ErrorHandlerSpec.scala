@@ -68,7 +68,7 @@ class ErrorHandlerSpec extends UnitSpec with GuiceOneAppPerSuite {
     (auditConnector.sendEvent(_ : DataEvent)(_: HeaderCarrier, _: ExecutionContext)).expects(*, *, *)
       .returns(Future.successful(Success))
 
-    val configuration = Configuration("appName" -> "myApp")
+    val configuration = Configuration("appName" -> "mgit yApp")
     val handler = new ErrorHandler(configuration, auditConnector, httpAuditEvent)
   }
 
